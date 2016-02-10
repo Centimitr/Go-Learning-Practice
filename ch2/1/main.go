@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"strconv"
 	"tempconv"
 )
 
@@ -13,9 +14,9 @@ func main() {
 			fmt.Fprintf(os.Stderr, "cf: %v\n", err)
 			os.Exit(1)
 		}
-		f := tempconv.Fahrenheit(t)
+		c := tempconv.Celsius(t)
 		k := tempconv.Kelvin(t)
 		fmt.Printf("%s = %s, %s = %s\n",
-			f, tempconv.KToC(k), c, tempconv.CToK(c))
+			c, tempconv.KToC(k), k, tempconv.CToK(c))
 	}
 }
