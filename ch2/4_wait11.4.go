@@ -1,9 +1,7 @@
 //for the sake of implicity, this practice write in single .go file
 package main
 
-import (
-	"fmt"
-)
+import ()
 
 var pc [256]byte
 
@@ -25,6 +23,15 @@ func PopCount(x uint64) int {
 }
 
 func PopCountStep(x uint64) int {
-	fmt.Println(x >> 1)
-	fmt.Println(x)
+	cnt := 0
+	for x > 0 {
+		if (x & 1) == 1 {
+			cnt++
+		}
+		x >>= 1
+	}
+	return cnt
+}
+
+func main() {
 }
