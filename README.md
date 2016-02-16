@@ -1,2 +1,2 @@
 # Go-Learning-Practice
-have a try
+code written when I'm reading the book gopl.
