@@ -9,7 +9,6 @@ import (
 )
 
 func main() {
-	// var avg = []int{}
 	sum := 0
 	file := os.Args[1]
 	content, _ := ioutil.ReadFile(file)
